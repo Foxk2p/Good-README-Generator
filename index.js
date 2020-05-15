@@ -68,13 +68,3 @@ writeFileSync('README.md', top)
       .catch(err => console.log(err))
   })
   .catch(err => console.log(err))
-
-// GHtoken(personal access token)
-// c1f329fa72facc83003cbbb55604c9df566f0908
-
-// {
-//   type: 'input',
-//     name: 'prompt6',
-//       message: 'What type of license would you like to use? e.g. ',
-//         choices: ['MIT License', 'GNU GPLv3', 'The Unlicense']
-// }
