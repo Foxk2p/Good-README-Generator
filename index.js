@@ -12,8 +12,21 @@ GitHub Project - README.md
 
 const userGithub = data => {
   return `
-   Github user: ${data.login}'s
-GitHub Project Title: ${(id)} project
+    Github Username: ${data.login}
+    GitHub Project Title: <img src=' ${data.avatar_url}' width='150px'>
+
+  `
+}
+
+const userInput = response => {
+  return `
+    ${response.userName}
+    ${response.prjDescription}
+    ${response.prjDescription}
+    ${response.prjUse}
+    ${response.prjSteps}
+    ${response.License}
+
   `
 }
 
@@ -54,16 +67,14 @@ writeFileSync('README.md', top)
     ])
       .then(userInfo => {
         console.log(userInfo)
-        for (const userName in userInfo) {
-          axios.get(`https://api.github.com/users/${userName}`, {
+        appendFileSync('README.md', userInput(userInfo))
+        axios.get(`https://api.github.com/users/${userInfo.userName}`, {
+        })
+          .then(({ data }) => {
+            appendFileSync('README.md', userGithub(data))
+
           })
-            .then(({ data }) => {
-              appendFileSync('README.md', userGithub(data))
-              if (name === 'prjLicense') {
-                appendFileSync('README.md', `Enjoy the Project!`)
-              }
-            })
-        }
+
       })
       .catch(err => console.log(err))
   })
