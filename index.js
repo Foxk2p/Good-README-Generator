@@ -13,13 +13,11 @@ GitHub Project - README.md
 const userGithub = data => {
   return `
     Github Username: ${data.login}
-      <img src=" ${data.avatar_url}" alt="User Avatar" width="200" height="200">
-  `
-}
 
+      <img src="${data.avatar_url}" alt="User Avatar" width="200" height="200">`
+}
 const userInput = response => {
   return `
-   
     Project Title:
       ${response.prjTitle}
     

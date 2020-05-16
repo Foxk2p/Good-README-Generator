@@ -2,7 +2,7 @@
 GitHub Project - README.md
 
     Github Username: Foxk2p
-      <img src=" https://avatars1.githubusercontent.com/u/63441952?v=4" alt="User Avatar" width="200" height="200">
+      <img src="https://avatars1.githubusercontent.com/u/63441952?v=4" alt="User Avatar" width="200" height="200">
 
   
    
