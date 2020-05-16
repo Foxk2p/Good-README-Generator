@@ -13,20 +13,27 @@ GitHub Project - README.md
 const userGithub = data => {
   return `
     Github Username: ${data.login}
-    GitHub Project Title:  <img src= ${data.avatar_url} alt="plant image" width="200" height="200">
-
+      <img src=" ${data.avatar_url}" alt="User Avatar" width="200" height="200">
   `
 }
 
 const userInput = response => {
   return `
-    ${response.userName}
-    ${response.prjDescription}
-    ${response.prjDescription}
-    ${response.prjUse}
-    ${response.prjSteps}
-    ${response.License}
+   
+    Project Title:
+      ${response.prjTitle}
+    
+     Description:
+      ${response.prjDescription}
 
+    Use:
+      ${response.prjUse}
+
+    Steps:
+      ${response.prjSteps}
+
+    License:
+      ${response.prjLicense}
   `
 }
 
@@ -72,9 +79,9 @@ writeFileSync('README.md', top)
         })
           .then(({ data }) => {
             appendFileSync('README.md', userGithub(data))
-
+            appendFileSync('README.md', userInput(userInfo))
           })
-        appendFileSync('README.md', userInput(userInfo))
+
       })
       .catch(err => console.log(err))
   })
