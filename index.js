@@ -13,7 +13,7 @@ GitHub Project - README.md
 const userGithub = data => {
   return `
     Github Username: ${data.login}
-    GitHub Project Title: <img src=' ${data.avatar_url}' width='150px'>
+    GitHub Project Title:  <img src= ${data.avatar_url} alt="plant image" width="200" height="200">
 
   `
 }
@@ -67,14 +67,14 @@ writeFileSync('README.md', top)
     ])
       .then(userInfo => {
         console.log(userInfo)
-        appendFileSync('README.md', userInput(userInfo))
+
         axios.get(`https://api.github.com/users/${userInfo.userName}`, {
         })
           .then(({ data }) => {
             appendFileSync('README.md', userGithub(data))
 
           })
-
+        appendFileSync('README.md', userInput(userInfo))
       })
       .catch(err => console.log(err))
   })
