@@ -4,12 +4,12 @@ good-README-Generator, GitHub Project - README.md
     Github Username: Foxk2p
 
     Foxk2p Avatar:
-    <img src="https://avatars1.githubusercontent.com/u/63441952?v=4" alt="User Avatar" width="150" height="150">
+    <img src="https://avatars1.githubusercontent.com/u/63441952?v=4.png" alt="User Avatar" width="150" height="150">
    
-  Project Title:
+    Project Title:
       good-README-Generator
     
-     Description:
+    Description:
       This is an application that runs in the NodeJS environment that generates a README.md file for a user's GitHub project. It was designed because a well developed README can often be the difference between a good project from a bad one.
 
     Use:
