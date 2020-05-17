@@ -14,7 +14,8 @@ const userGithub = data => {
   return `
     Github Username: ${data.login}
 
-      <img src="${data.avatar_url}" alt="User Avatar" width="200" height="200">`
+    ${data.login} Avatar:
+  <img src="${data.avatar_url}" width="200" height="200">`
 }
 const userInput = response => {
   return `
@@ -27,7 +28,7 @@ const userInput = response => {
     Use:
       ${response.prjUse}
 
-    Steps:
+    Steps To Use:
       ${response.prjSteps}
 
     License:
@@ -67,7 +68,7 @@ writeFileSync('README.md', top)
       {
         type: 'input',
         name: 'prjLicense',
-        message: 'What type of license would you like to use? e.g. MIT License GNU GPLv3 The Unlicense '
+        message: 'What type of license would you like to use? e.g. MIT License, GNU GPLv3, The Unlicense '
       }
     ])
       .then(userInfo => {
