@@ -7,7 +7,7 @@ const writeFileSync = promisify(writeFile)
 const appendFileSync = promisify(appendFile)
 
 const top = `
-GitHub Project - README.md
+good-README-Generator, GitHub Project - README.md
 `
 
 const userGithub = data => {
@@ -15,14 +15,16 @@ const userGithub = data => {
     Github Username: ${data.login}
 
     ${data.login} Avatar:
-  <img src="${data.avatar_url}" width="200" height="200">`
+    <img src="${data.avatar_url}" alt="User Avatar" width="150" height="150">`
 }
+
 const userInput = response => {
   return `
+   
     Project Title:
       ${response.prjTitle}
     
-     Description:
+    Description:
       ${response.prjDescription}
 
     Use:
