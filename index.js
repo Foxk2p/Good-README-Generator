@@ -15,25 +15,35 @@ const userGithub = data => {
     Github Username: ${data.login}
 
     ${data.login} Avatar:
-    <img src="${data.avatar_url}" alt="User Avatar" width="150" height="150">`
+    <img src="${data.avatar_url}" alt="User Avatar" width="150" height="150">
+
+   ${data.login}'s Profile:
+   For more information [Visit GitHub Profile](${data.html_url})
+
+  `
 }
 
 const userInput = response => {
   return `
-   
-    Project Title:
+    * [Project Title](#projectTitle)
+    * [Description](#description)
+    * [Usage](#usage)
+    * [Steps To Use](#stepsToUse)
+    * [License](#license)
+
+    ## Project Title
       ${response.prjTitle}
     
-    Description:
+    ## Description
       ${response.prjDescription}
 
-    Use:
+    ## Usage
       ${response.prjUse}
 
-    Steps To Use:
+    ## Steps To Use
       ${response.prjSteps}
 
-    License:
+    ## License
       ${response.prjLicense}
   `
 }
